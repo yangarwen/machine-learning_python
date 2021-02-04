@@ -17,7 +17,6 @@ cm = confusion_matrix(y_true=Y_test, y_pred= log_reg.predict(X_test))
 X_new = np.linspace(0, 3, 1000).reshape(-1, 1)
 y_proba = log_reg.predict_proba(X_new)
 decision_boundary = X_new[y_proba[:, 1] >= 0.5][0]
-print(decision_boundary)
 
 plt.figure(figsize=(8, 5))
 plt.plot(X[y==0], y[y==0], "bs")
